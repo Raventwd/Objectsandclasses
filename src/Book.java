@@ -5,8 +5,25 @@ public class Book {
 
     public Book(String bookName, Author author, int yearOfPublishing) {
         this.bookName = bookName;
-        this.author = new Author(author.getAuthorName(), author.getAuthorSurname());
+        this.author = author;
         this.yearOfPublishing = yearOfPublishing;
+    }
+
+    @Override
+    public String toString() {
+        return bookName + " , " + author + " , " + yearOfPublishing;
+    }
+    @Override
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Book book = (Book) other;
+        return bookName.equals(book.bookName);
+    }
+    @Override
+    public int hashCode(){
+        return java.util.Objects.hash(bookName,author,yearOfPublishing);
     }
 
     public String getBookName() {
