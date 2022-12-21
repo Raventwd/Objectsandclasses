@@ -14,7 +14,7 @@ public class Author {
 
     @Override
     public String toString() {
-        return authorName +" "+authorSurname;
+        return authorName + " " + authorSurname;
     }
 
     @Override
@@ -23,12 +23,13 @@ public class Author {
             return false;
         }
         Author author = (Author) other;
-        return authorName.equals(author.authorName);
-    }
+        return author.equals(author);
+        }
+
 
     @Override
-    public int hashCode(){
-        return java.util.Objects.hash(authorName,authorSurname);
+    public int hashCode() {
+        return java.util.Objects.hash(authorName, authorSurname);
     }
 
     public String getAuthorSurname() {

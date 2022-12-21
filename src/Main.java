@@ -7,6 +7,5 @@ public class Main {
         book2.setYearOfPublishing(2000);
         System.out.println(author1);
         System.out.println(book1);
-
     }
 }

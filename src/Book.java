@@ -19,7 +19,7 @@ public class Book {
             return false;
         }
         Book book = (Book) other;
-        return bookName.equals(book.bookName);
+        return book.equals(book);
     }
     @Override
     public int hashCode(){
