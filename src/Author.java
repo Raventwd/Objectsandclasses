@@ -23,7 +23,7 @@ public class Author {
             return false;
         }
         Author author = (Author) other;
-        return author.equals(author);
+        return this.authorName.equals(author.authorName) && this.authorSurname.equals(author.authorSurname);
         }
 
 

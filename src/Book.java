@@ -19,7 +19,7 @@ public class Book {
             return false;
         }
         Book book = (Book) other;
-        return book.equals(book);
+        return this.bookName.equals(book.bookName)&&this.author.equals(author)&&this.yearOfPublishing==yearOfPublishing;
     }
     @Override
     public int hashCode(){
